@@ -21,7 +21,7 @@ class Time:
 
         return f"{Hour}:{Minute}:{Second} {AMPM}"
     
-    def Timecheck(time, selection):
+    def Time_check(time, selection):
         if selection.lower() == "h" or "m" or "s":
             return str(time) == datetime.datetime.now().strftime(f"%{str(selection.upper())}")
 
@@ -38,7 +38,7 @@ class Time:
             return str(time) == datetime.datetime.now().strftime("%H:%M:%S")
 
 class Post:
-    def Websiteping(website):
+    def Website_ping(website):
         return urllib.request.urlopen(website).getcode()
 
     def Discord_webhook(url, msg):
